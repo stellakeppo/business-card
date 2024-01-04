@@ -15,14 +15,30 @@
         </div>
         <div class="bottom">
             <p>My portfolio is under construction. Meanwhile, drop a line or check on any updates from me in any of the following.</p>
-            <div class="socialsCont">
-                <a href="https://twitter.com/KeppoStella" class="fa fa-twitter" target="_blank"></a>
-                <a href="https://www.linkedin.com/in/stellakeppo/" class="fa fa-linkedin" target="_blank"></a>
-                <a href="https://www.instagram.com/stellakeppo/" class="fa fa-instagram" target="_blank"></a>
+           
+            <div>
+              <div class="flex">
+                <img class="socialIcon" src="/icons/ikoni-nuoli.svg" alt='' role='image'/>
+                <a href="https://www.instagram.com/stellakeppo/" class="socialLink" target="_blank">Instagram</a>
+              </div>
+              <div class="flex">
+                <img class="socialIcon" src="/icons/ikoni-nuoli.svg" alt='' role='image'/>
+                <a href="https://www.linkedin.com/in/stellakeppo/" class="socialLink" target="_blank">LinkedIn</a>
+              </div>
+              <div class="flex">
+                <img class="socialIcon" src="/icons/ikoni-nuoli.svg" alt='' role='image'/>
+                <a href="https://twitter.com/KeppoStella" class="socialLink" target="_blank">Twitter</a>
+              </div>
             </div>
         </div>
     </main>
-    <footer class="copy"></footer>
-	<script src="index.js"></script>
+    <footer class="copy">
+      <p id="copyright"></p>
+      <script defer>
+        let currentDate = new Date();
+        let currentYear = currentDate.getFullYear();
+        document.getElementById('copyright').innerHTML = '&copy' + ' ' +currentYear + " Stella Keppo";
+      </script>
+    </footer>
   </body>
 </html>
