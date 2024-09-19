@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Unohtumaton päivä hetki kerrallaan.</title>
+    <title>Onni ja Veera</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,38 +16,70 @@
     <script>
         const posts = [];
         const images = [
-        'img/Westerholmit-1.jpg',
-        'img/Westerholmit-2.jpg',
-        'img/Westerholmit-3.jpg',
-        'img/Westerholmit-007.jpg',
-        'img/Westerholmit-013.jpg',
-        'img/Westerholmit-033.jpg',
-        'img/Westerholmit-034.jpg',
-        'img/Westerholmit-115.jpg',
-        'img/Westerholmit-132.jpg',
-        'img/Westerholmit-138.jpg',
-        'img/Westerholmit-140.jpg',
-        'img/Westerholmit-158.jpg',
-        'img/Westerholmit-192.jpg',
-        'img/Westerholmit-226.jpg',
-        'img/Westerholmit-294.jpg',
-        'img/Westerholmit-299.jpg',
-        'img/delarela_4.jpg',
-        'img/delarela_13.jpg',
-        'img/delarela_15.jpg',
-        'img/delarela_17.jpg',
-        'img/delarela_24.jpg',
-        'img/delarela_36.jpg',
-        'img/delarela_49.jpg',
-        'img/delarela_64.jpg',
-        'img/delarela_88.jpg',
-        'img/delarela_92.jpg',
-        'img/delarela_94.jpg',
-        'img/delarela_116.jpg',
-        'img/delarela_126.jpg',
-        'img/delarela_136.jpg',
-        'img/delarela_139.jpg',
-        'img/delarela_141.jpg'
+        'img/Onni_ja_Veera_002.jpg',
+        'img/Onni_ja_Veera_006.jpg',
+        'img/Onni_ja_Veera_014.jpg',
+        'img/Onni_ja_Veera_021.jpg',
+        'img/Onni_ja_Veera_027.jpg',
+        'img/Onni_ja_Veera_031.jpg',
+        'img/Onni_ja_Veera_038.jpg',
+        'img/Onni_ja_Veera_045.jpg',
+        'img/Onni_ja_Veera_051.jpg',
+        'img/Onni_ja_Veera_053.jpg',
+        'img/Onni_ja_Veera_068.jpg',
+        'img/Onni_ja_Veera_070.jpg',
+        'img/Onni_ja_Veera_071.jpg',
+        'img/Onni_ja_Veera_075.jpg',
+        'img/Onni_ja_Veera_084.jpg',
+        'img/Onni_ja_Veera_086.jpg',
+        'img/Onni_ja_Veera_093.jpg',
+        'img/Onni_ja_Veera_095.jpg',
+        'img/Onni_ja_Veera_097.jpg',
+        'img/Onni_ja_Veera_114.jpg',
+        'img/Onni_ja_Veera_120.jpg',
+        'img/Onni_ja_Veera_123.jpg',
+        'img/Onni_ja_Veera_126.jpg',
+        'img/Onni_ja_Veera_133.jpg',
+        'img/Onni_ja_Veera_135.jpg',
+        'img/Onni_ja_Veera_138.jpg',
+        'img/Onni_ja_Veera_142.jpg',
+        'img/Onni_ja_Veera_144.jpg',
+        'img/Onni_ja_Veera_149.jpg',
+        'img/Onni_ja_Veera_156.jpg',
+        'img/Onni_ja_Veera_157.jpg',
+        'img/Onni_ja_Veera_162.jpg',
+        'img/Onni_ja_Veera_163.jpg',
+        'img/Onni_ja_Veera_170.jpg',
+        'img/Onni_ja_Veera_177.jpg',
+        'img/Onni_ja_Veera_183.jpg',
+        'img/Onni_ja_Veera_186.jpg',
+        'img/Onni_ja_Veera_189.jpg',
+        'img/Onni_ja_Veera_213.jpg',
+        'img/Onni_ja_Veera_218.jpg',
+        'img/Onni_ja_Veera_227.jpg',
+        'img/Onni_ja_Veera_233.jpg',
+        'img/Onni_ja_Veera_244.jpg',
+        'img/Onni_ja_Veera_249.jpg',
+        'img/Onni_ja_Veera_262.jpg',
+        'img/Onni_ja_Veera_263.jpg',
+        'img/Onni_ja_Veera_264.jpg',
+        'img/Onni_ja_Veera_265.jpg',
+        'img/Onni_ja_Veera_272.jpg',
+        'img/Onni_ja_Veera_273.jpg',
+        'img/Onni_ja_Veera_288.jpg',
+        'img/Onni_ja_Veera_291.jpg',
+        'img/Onni_ja_Veera_301.jpg',
+        'img/Onni_ja_Veera_.jpg',
+        'img/Onni_ja_Veera_.jpg',
+        'img/Onni_ja_Veera_.jpg',
+        'img/Onni_ja_Veera_.jpg',
+        'img/Onni_ja_Veera_.jpg',
+        'img/Onni_ja_Veera_.jpg',
+        'img/Onni_ja_Veera_.jpg',
+        'img/Onni_ja_Veera_.jpg',
+        'img/Onni_ja_Veera_.jpg',
+        'img/Onni_ja_Veera_.jpg',
+        'img/Onni_ja_Veera_.jpg',
         ];
 
         let imageIndex = 0;
@@ -132,22 +164,16 @@
     };
     </script>
 	<main>
-        <header>
-            <div class="columnFlex">
-                <div class="navCont">
-                    <p style="padding-right: 20px;">VALOKUVAAJAT</p>
-                    <p style="padding-right: 20px;">KUVAGALLERIA</p>
-                    <p class="logo">LOGO</p> <!---CHANGE--->
-                    <p style="padding-left: 20px;">HINNASTO</p>
-                    <p style="padding-left: 20px;">OTA YHTEYTTÄ</p>
-                </div>
-            </div>
-        </header>
-        <div class="lander"></div>
+        <div class="lander-txt">
+            <h1 class="italic">Onni & Veera</h1>
+            <p>07.09.2024</p>
+        </div>
+        <div class="lander">
+        </div>
         <div class="infoCont">
-            <h3 style="padding-top:20vh; padding-bottom: 5vh;">Unohtumaton päivä, <span class="italic">hetki kerrallaan.</span></h3>
+            <h3 style="padding-top:20vh; padding-bottom: 5vh;">Hei taas!</h3>
             <div class="paragraphCont">
-                <p class="italic">Tähän palvelulupaus wau uu jea ja miksi tehdään tätä? Muutaman lauseen selostus ihan ok, ei mitään liian pitkää niin jaksaa vielä lukea?</p>
+                <p class="italic">Kiitos vielä kerran luottamuksesta ja ihanan päivän luomisesta kaikille vieraille, mukaan lukien meille! Tässä on kollaasina teille meidän mielestä parhaita otoksia päivän tunnelmista, ja sivun lopusta löytyy sitten linkki Dropbox-kansioon, mistä löydätte kaikki kuvat sekä videomateriaalit.</p>
             </div>
         </div>
         <!--<div class="sectionHeader">
@@ -158,7 +184,7 @@
     <div class="footer">
         <footer>
             <div style="text-align: center;">
-                <a href="https://www.instagram.com/unohtumatonhetki/" target="_blank"><i class="fa fa-instagram" style="font-size:36px"></i></a>
+                <a href="https://www.dropbox.com/scl/fo/0yc75i7imnshoc41v74s0/APnbT7I0BdJh96ohKdFDR8Y?dl=0&e=1&rlkey=x77w4q2edrmp2l1zk420e8q94" target="_blank">Droppariin katsomaan kaikki tästä linkistä!</a>
             </div>
         </footer>
     </div>
