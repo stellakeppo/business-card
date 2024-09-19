@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="fi">
+  <head>
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Unohtumaton päivä hetki kerrallaan.</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300;1,8..60,400;1,8..60,600&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <script>
+        const posts = [];
+        const images = [
+        'img/Westerholmit-1.jpg',
+        'img/Westerholmit-2.jpg',
+        'img/Westerholmit-3.jpg',
+        'img/Westerholmit-007.jpg',
+        'img/Westerholmit-013.jpg',
+        'img/Westerholmit-033.jpg',
+        'img/Westerholmit-034.jpg',
+        'img/Westerholmit-115.jpg',
+        'img/Westerholmit-132.jpg',
+        'img/Westerholmit-138.jpg',
+        'img/Westerholmit-140.jpg',
+        'img/Westerholmit-158.jpg',
+        'img/Westerholmit-192.jpg',
+        'img/Westerholmit-226.jpg',
+        'img/Westerholmit-294.jpg',
+        'img/Westerholmit-299.jpg',
+        'img/delarela_4.jpg',
+        'img/delarela_13.jpg',
+        'img/delarela_15.jpg',
+        'img/delarela_17.jpg',
+        'img/delarela_24.jpg',
+        'img/delarela_36.jpg',
+        'img/delarela_49.jpg',
+        'img/delarela_64.jpg',
+        'img/delarela_88.jpg',
+        'img/delarela_92.jpg',
+        'img/delarela_94.jpg',
+        'img/delarela_116.jpg',
+        'img/delarela_126.jpg',
+        'img/delarela_136.jpg',
+        'img/delarela_139.jpg',
+        'img/delarela_141.jpg'
+        ];
+
+        let imageIndex = 0;
+
+        for (let i = 1; i <= images.length; i++) {
+        let item = {
+            id: i,
+            title: `Post ${i}`,
+            image: images[imageIndex],
+        };
+        posts.push(item);
+        imageIndex++;
+        if (imageIndex > images.length - 1) imageIndex = 0;
+        }
+
+        window.onload = function() {
+        const container = document.querySelector('.container');
+
+        function generateMasonryGrid(columns, posts) {
+        container.innerHTML = '';
+
+        //Store column arrays that contain relevant posts
+        let columnWrappers = {};
+
+        //Create column item array and  add this to column wrapper object
+        for (let i = 0; i < columns; i++) {
+            columnWrappers[`column${i}`] = [];
+        }
+        for (let i = 0; i < posts.length; i++) {
+            const column = i % columns;
+            columnWrappers[`column${column}`].push(posts[i]);
+        }
+        for (let i = 0; i < columns; i++) {
+            let columnPosts = columnWrappers[`column${i}`];
+            let column = document.createElement('div');
+            column.classList.add('column');
+            columnPosts.forEach((posts) => {
+            let postDiv = document.createElement('div');
+            postDiv.classList.add('post');
+            let image = document.createElement('img');
+            image.src = posts.image;
+            let overlay = document.createElement('div');
+            overlay.classList.add('overlay');
+            let title = document.createElement('h3');
+            title.innerText = posts.title;
+
+            //overlay.appendChild(title);
+            postDiv.append(image, overlay);
+            column.appendChild(postDiv);
+            });
+            container.appendChild(column);
+        }
+        }
+
+        let previousScreenSize = innerWidth;
+        console.log(previousScreenSize);
+
+        window.addEventListener('resize', () => {
+        imageIndex = 0;
+        if (innerWidth < 600 && previousScreenSize >= 600) {
+            generateMasonryGrid(1, posts);
+        } else if (
+            innerWidth >= 600 &&
+            innerWidth < 1000 &&
+            (previousScreenSize < 600 || previousScreenSize >= 1000)
+        ) {
+            generateMasonryGrid(2, posts);
+        } else if (innerWidth >= 1000 && previousScreenSize < 1000) {
+            generateMasonryGrid(4, posts);
+        }
+        previousScreenSize = innerWidth;
+        });
+
+        //Page Load
+        if (previousScreenSize < 600) {
+        generateMasonryGrid(1, posts);
+        } else if (previousScreenSize >= 600 && previousScreenSize < 1000) {
+        generateMasonryGrid(2, posts);
+        } else {
+        generateMasonryGrid(4, posts);
+        }
+    };
+    </script>
+	<main>
+        <header>
+            <div class="columnFlex">
+                <div class="navCont">
+                    <p style="padding-right: 20px;">VALOKUVAAJAT</p>
+                    <p style="padding-right: 20px;">KUVAGALLERIA</p>
+                    <p class="logo">LOGO</p> <!---CHANGE--->
+                    <p style="padding-left: 20px;">HINNASTO</p>
+                    <p style="padding-left: 20px;">OTA YHTEYTTÄ</p>
+                </div>
+            </div>
+        </header>
+        <div class="lander"></div>
+        <div class="infoCont">
+            <h3 style="padding-top:20vh; padding-bottom: 5vh;">Unohtumaton päivä, <span class="italic">hetki kerrallaan.</span></h3>
+            <div class="paragraphCont">
+                <p class="italic">Tähän palvelulupaus wau uu jea ja miksi tehdään tätä? Muutaman lauseen selostus ihan ok, ei mitään liian pitkää niin jaksaa vielä lukea?</p>
+            </div>
+        </div>
+        <!--<div class="sectionHeader">
+            <h3>GALLERIA</h3>
+        </div>-->
+        <div class="container"></div>
+    </main>
+    <div class="footer">
+        <footer>
+            <div style="text-align: center;">
+                <a href="https://www.instagram.com/unohtumatonhetki/" target="_blank"><i class="fa fa-instagram" style="font-size:36px"></i></a>
+            </div>
+        </footer>
+    </div>
+  </body>
+</html>
