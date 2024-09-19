@@ -80,6 +80,7 @@ header {
     height: 100vh;
     background-image: url('Onni_ja_Veera_banner.jpg');
     background-size: cover;
+    background-position: center;
     filter: brightness(50%);
 }
 
