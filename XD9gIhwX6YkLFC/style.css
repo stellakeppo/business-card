@@ -85,8 +85,17 @@ header {
 }
 
 .infoCont {
+    margin: auto;
+    max-width: 75vw;
     text-align: center;
+    padding-bottom: 200px;
 }
+
+@media (max-width: 768px) {
+    .infoCont p {
+        font-size: 1.5em;
+    }
+  }
 
 .paragraphCont {
     height: 50vh;
@@ -100,6 +109,8 @@ header {
 }
 
 .container{
+    margin: auto;
+    max-width: 1400px;
     position: relative;
     width: 100%;
     display: flex;
@@ -128,16 +139,16 @@ header {
     z-index: 999;
     position: relative;
     /* position: absolute; */
-    background: linear-gradient(rgba(0,0,0,0), white 50%);
+    background: linear-gradient(rgba(0,0,0,0), white 30%);
     background-color: linear-gradient();
-    height: 150vh;
-    margin-top: -150vh;
+    height: 130vh;
+    margin-top: -130vh;
     bottom: 0px;
   }
 
   footer {
     width: 100vw;
-    height: 50vh;
+    height: 75vh;
     position: absolute;
     bottom: 0px;
   }

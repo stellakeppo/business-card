@@ -108,7 +108,9 @@
         'img/Onni_ja_Veera_553.jpg',
         'img/Onni_ja_Veera_554.jpg',
         'img/Onni_ja_Veera_557.jpg',
-        'img/Onni_ja_Veera_561.jpg'
+        'img/Onni_ja_Veera_561.jpg',
+        'img/Onni_ja_Veera_565.jpg',
+        'img/Onni_ja_Veera_567.jpg'
         ];
 
         let imageIndex = 0;
@@ -145,6 +147,8 @@
             let columnPosts = columnWrappers[`column${i}`];
             let column = document.createElement('div');
             column.classList.add('column');
+            column.id = "column"+(i+1);
+            let columnID = column.id;
             columnPosts.forEach((posts) => {
             let postDiv = document.createElement('div');
             postDiv.classList.add('post');
@@ -154,12 +158,34 @@
             overlay.classList.add('overlay');
             let title = document.createElement('h3');
             title.innerText = posts.title;
-
             //overlay.appendChild(title);
             postDiv.append(image, overlay);
             column.appendChild(postDiv);
+
             });
             container.appendChild(column);
+            if(columnID === "column1" && innerWidth > 1000){
+                let newPostDiv2 = document.createElement('div');
+                newPostDiv2.classList.add('post');
+                let image2 = document.createElement('img');
+                image2.src = 'img/Onni_ja_Veera_563.jpg';
+                newPostDiv2.append(image2);
+                document.getElementById('column1').appendChild(newPostDiv2);
+
+                let newPostDiv3 = document.createElement('div');
+                newPostDiv3.classList.add('post');
+                let image3 = document.createElement('img');
+                image3.src = 'img/Onni_ja_Veera_564.jpg';
+                newPostDiv3.append(image3);
+                document.getElementById('column1').appendChild(newPostDiv3);
+
+                let newPostDiv = document.createElement('div');
+                newPostDiv.classList.add('post');
+                let image = document.createElement('img');
+                image.src = 'img/Onni_ja_Veera_561.jpg';
+                newPostDiv.append(image);
+                document.getElementById('column1').appendChild(newPostDiv);
+            }
         }
         }
 
@@ -177,7 +203,7 @@
         ) {
             generateMasonryGrid(2, posts);
         } else if (innerWidth >= 1000 && previousScreenSize < 1000) {
-            generateMasonryGrid(4, posts);
+            generateMasonryGrid(3, posts);
         }
         previousScreenSize = innerWidth;
         });
@@ -188,7 +214,7 @@
         } else if (previousScreenSize >= 600 && previousScreenSize < 1000) {
         generateMasonryGrid(2, posts);
         } else {
-        generateMasonryGrid(4, posts);
+        generateMasonryGrid(3, posts);
         }
     };
     </script>
@@ -201,13 +227,8 @@
         </div>
         <div class="infoCont">
             <h3 style="padding-top:20vh; padding-bottom: 5vh;">Hei taas!</h3>
-            <div class="paragraphCont">
                 <p class="italic">Kiitos vielä kerran luottamuksesta ja ihanan päivän luomisesta kaikille vieraille, mukaan lukien meille! Tässä on kollaasina teille meidän mielestä parhaita otoksia päivän tunnelmista, ja sivun lopusta löytyy sitten linkki Dropbox-kansioon, mistä löydätte kaikki kuvat sekä videomateriaalit.</p>
-            </div>
         </div>
-        <!--<div class="sectionHeader">
-            <h3>GALLERIA</h3>
-        </div>-->
         <div class="container"></div>
     </main>
     <div class="footer">
