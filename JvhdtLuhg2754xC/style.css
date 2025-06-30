@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, p {
+    font-family: 'Source Serif 4', serif;
+}
+
+
+h3 {
+    font-weight: 200;
+    letter-spacing: 1px;
+    font-size: 2em;
+}
+
+p {
+    font-size: 1.5em;
+    line-height: 2em;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-style: italic;
+    font-size: 2em;
+    border-bottom: 1px solid black;
+}
+
+.italic {
+    font-style: italic;
+}
+.lander-txt {
+   color: white; 
+   width: 100vw;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   z-index: 999;
+   position: absolute;
+   top: 33vh;
+}
+.lander-txt h1 {
+    display: flex;
+    font-weight: 200;
+    letter-spacing: 1px;
+    font-size: 4em;
+}
+header {
+    background-color: white;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    width: 100vw;
+    position: fixed;
+    border-bottom: 1px solid black;
+    top: 0px;
+    z-index: 999;
+}
+
+.columnFlex {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.columnFlex p:not(.logo) {
+    letter-spacing: 1px;
+    font-weight: 200;
+    font-size: 1em;
+}
+
+.navCont {
+    display: flex; width: auto; justify-content: space-around; align-items: center;
+}
+
+.logo {font-weight: bold; font-size: 2em;}
+
+.lander {
+    height: 100vh;
+    background-image: url('Jenny&Luke-306.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: brightness(50%);
+}
+
+.infoCont {
+    margin: auto;
+    max-width: 75vw;
+    text-align: center;
+    padding-bottom: 200px;
+}
+
+@media (max-width: 768px) {
+    .infoCont p {
+        font-size: 1.5em;
+    }
+  }
+
+.paragraphCont {
+    height: 50vh;
+    margin-left: 25%;
+    width: 50%;
+}
+
+.sectionHeader {
+    text-align: center;
+    padding: 2.5%;
+}
+
+.container{
+    margin: auto;
+    max-width: 1400px;
+    position: relative;
+    width: 100%;
+    display: flex;
+    gap: 2px;
+    /*padding: 100px 2vw;*/
+  }
+  .column{
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    overflow-y: hidden;
+  }
+  .post{
+    position: relative;
+    overflow: hidden;
+    width:100%;
+    margin-bottom: -2px;
+  }
+  img{
+    width: 100%;
+    height: auto;
+  }
+
+  .footer {
+    z-index: 999;
+    position: relative;
+    /* position: absolute; */
+    background: linear-gradient(rgba(0,0,0,0), white 30%);
+    background-color: linear-gradient();
+    height: 130vh;
+    margin-top: -130vh;
+    bottom: 0px;
+  }
+
+  footer {
+    width: 100vw;
+    height: 75vh;
+    position: absolute;
+    bottom: 0px;
+  }
+  
